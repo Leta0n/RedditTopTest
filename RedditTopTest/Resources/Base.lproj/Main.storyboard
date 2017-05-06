@@ -26,11 +26,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostTableViewCell" id="6r8-kn-7Fp" customClass="PostTableViewCell" customModule="RedditTopTest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostTableViewCell" rowHeight="100" id="6r8-kn-7Fp" customClass="PostTableViewCell" customModule="RedditTopTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6r8-kn-7Fp" id="9Cn-B0-MwC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5hT-dK-EVb">
@@ -40,7 +40,7 @@
                                                         <constraint firstAttribute="height" constant="100" id="lzM-he-DXy"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Title]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fw-Su-VO3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Title]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fw-Su-VO3">
                                                     <rect key="frame" x="116" y="16" width="243" height="21"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -64,6 +64,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="5hT-dK-EVb" firstAttribute="leading" secondItem="9Cn-B0-MwC" secondAttribute="leading" constant="8" id="Eku-co-cmi"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="0fw-Su-VO3" secondAttribute="bottom" constant="54.5" id="JXP-WP-ozt"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0fw-Su-VO3" secondAttribute="trailing" constant="8" id="P09-tp-P49"/>
                                                 <constraint firstItem="0fw-Su-VO3" firstAttribute="top" secondItem="9Cn-B0-MwC" secondAttribute="topMargin" constant="8" id="P75-LE-Bme"/>
                                                 <constraint firstItem="cmD-ci-P32" firstAttribute="top" secondItem="0fw-Su-VO3" secondAttribute="bottom" constant="8" id="Pg9-v6-i5S"/>
