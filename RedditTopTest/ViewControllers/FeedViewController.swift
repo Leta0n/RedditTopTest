@@ -8,13 +8,14 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, UITableViewDelegate {
 	
 	// MARK: - IBOutlets
 	@IBOutlet weak private var tableView: UITableView!
 	
 	// MARK: - Dependencies
 	var feedService: FeedService!
+	var flowController: FeedFlowController!
 	var dataSource: ArrayTableViewDataSource<Post, PostTableViewCell>!
 
 	override func viewDidLoad() {
@@ -36,5 +37,14 @@ class FeedViewController: UIViewController {
 		tableView.estimatedRowHeight = 100
 		tableView.tableFooterView = UIView(frame: CGRect.zero)
 		tableView.dataSource = dataSource
+		tableView.delegate = self
+	}
+	
+	// MARK: - UITableViewDelegate
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		let post = dataSource[indexPath.row]
+		flowController.postSelected(post)
 	}
 }

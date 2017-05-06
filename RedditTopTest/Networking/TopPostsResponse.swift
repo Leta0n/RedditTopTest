@@ -42,6 +42,6 @@ func PostMapper(element: [String: Any]) -> Post? {
 	let date = Date(timeIntervalSince1970: timeshtamp)
 	
 	let post = Post(title: title, author: author, date: date,
-	                commentsAmount: comments, thumbnailURL: thumbnailURL, imageURL: url)
+	                commentsAmount: comments, thumbnailURL: thumbnailURL, detailsURL: url)
 	return post
 }

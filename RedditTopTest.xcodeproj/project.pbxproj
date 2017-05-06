@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7B844A51EBE675D00203134 /* FeedFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844A41EBE675D00203134 /* FeedFlowController.swift */; };
 		F7D1B7571EBDD37F00D560B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7561EBDD37F00D560B8 /* AppDelegate.swift */; };
 		F7D1B77A1EBDEC1B00D560B8 /* NetworkSessionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7791EBDEC1B00D560B8 /* NetworkSessionTest.swift */; };
 		F7D1B7821EBDEE3400D560B8 /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7811EBDEE3400D560B8 /* EndpointMock.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7B844A41EBE675D00203134 /* FeedFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedFlowController.swift; sourceTree = "<group>"; };
 		F7D1B7531EBDD37F00D560B8 /* RedditTopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditTopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D1B7561EBDD37F00D560B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7D1B7771EBDEC1B00D560B8 /* RedditTopTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditTopTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D1B7951EBE1B0000D560B8 /* FeedViewController.swift */,
+				F7B844A41EBE675D00203134 /* FeedFlowController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				F7D1B7981EBE1B0000D560B8 /* GetTopPostsEndpoint.swift in Sources */,
 				F7D1B7971EBE1B0000D560B8 /* Endpoint.swift in Sources */,
 				F7D1B7C81EBE3BB900D560B8 /* UpdatableCell.swift in Sources */,
+				F7B844A51EBE675D00203134 /* FeedFlowController.swift in Sources */,
 				F7D1B7CA1EBE3BB900D560B8 /* TableViewDataSource.swift in Sources */,
 				F7D1B7C61EBE3BB900D560B8 /* ArrayDataSource.swift in Sources */,
 				F7D1B7C71EBE3BB900D560B8 /* DataSource.swift in Sources */,
@@ -589,6 +593,7 @@
 				F7D1B7801EBDEC1B00D560B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
