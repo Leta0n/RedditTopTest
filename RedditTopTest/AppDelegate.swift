@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication,
 	                 didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		setupNetworking(application)
+		setupImageLoader()
 		return true
 	}
 	
@@ -28,5 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		if let rootVC = window?.rootViewController as? FeedViewController {
 			rootVC.feedService = feedService
 		}
+	}
+	
+	private func setupImageLoader() {
+		let queue = DispatchQueue(label: "ImageLoading", attributes: .concurrent)
+		let imageLoader = ImageLoader(queue)
+		ImageLoader.sharedLoader = imageLoader
 	}
 }

@@ -29,6 +29,15 @@ class FeedViewController: UIViewController {
 	
 	func setupDataSource() {
 		dataSource = ArrayTableViewDataSource(items: [], tableView: tableView)
+		dataSource.cellSetupHandler = { model, cell, indexPath in
+			guard let urlToLoad = model.thumbnailURL else { return }
+			ImageLoader.sharedLoader?.loadImage(with: urlToLoad) { [urlToLoad] image, url in
+				guard urlToLoad.absoluteString == url.absoluteString else {
+					return
+				}
+				cell.updateImage(image)
+			}
+		}
 	}
 	
 	func setupTableView() {

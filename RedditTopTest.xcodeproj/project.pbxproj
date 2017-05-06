@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7B844921EBE5A0200203134 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844911EBE5A0200203134 /* UIImageView+Cache.swift */; };
+		F7B844991EBE5ADF00203134 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844961EBE5ADF00203134 /* Endpoint.swift */; };
+		F7B8449A1EBE5ADF00203134 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844971EBE5ADF00203134 /* NetworkSession.swift */; };
+		F7B8449B1EBE5ADF00203134 /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844981EBE5ADF00203134 /* RequestResponse.swift */; };
+		F7B8449D1EBE5AFE00203134 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B8449C1EBE5AFE00203134 /* ImageLoader.swift */; };
 		F7D1B7571EBDD37F00D560B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7561EBDD37F00D560B8 /* AppDelegate.swift */; };
 		F7D1B77A1EBDEC1B00D560B8 /* NetworkSessionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7791EBDEC1B00D560B8 /* NetworkSessionTest.swift */; };
 		F7D1B7821EBDEE3400D560B8 /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7811EBDEE3400D560B8 /* EndpointMock.swift */; };
 		F7D1B7861EBE14CE00D560B8 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7851EBE14CE00D560B8 /* URLSessionMock.swift */; };
 		F7D1B7881EBE150000D560B8 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7871EBE150000D560B8 /* URLSessionDataTaskMock.swift */; };
 		F7D1B7961EBE1B0000D560B8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B78A1EBE1B0000D560B8 /* Post.swift */; };
-		F7D1B7971EBE1B0000D560B8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B78C1EBE1B0000D560B8 /* Endpoint.swift */; };
 		F7D1B7981EBE1B0000D560B8 /* GetTopPostsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B78D1EBE1B0000D560B8 /* GetTopPostsEndpoint.swift */; };
-		F7D1B7991EBE1B0000D560B8 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B78E1EBE1B0000D560B8 /* NetworkSession.swift */; };
-		F7D1B79A1EBE1B0000D560B8 /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B78F1EBE1B0000D560B8 /* RequestResponse.swift */; };
 		F7D1B79B1EBE1B0000D560B8 /* TopPostsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7901EBE1B0000D560B8 /* TopPostsResponse.swift */; };
 		F7D1B79C1EBE1B0000D560B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D1B7921EBE1B0000D560B8 /* Assets.xcassets */; };
 		F7D1B79E1EBE1B0000D560B8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7951EBE1B0000D560B8 /* FeedViewController.swift */; };
@@ -44,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7B844911EBE5A0200203134 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
+		F7B844961EBE5ADF00203134 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		F7B844971EBE5ADF00203134 /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		F7B844981EBE5ADF00203134 /* RequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
+		F7B8449C1EBE5AFE00203134 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		F7D1B7531EBDD37F00D560B8 /* RedditTopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditTopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D1B7561EBDD37F00D560B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7D1B7771EBDEC1B00D560B8 /* RedditTopTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditTopTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,10 +60,7 @@
 		F7D1B7851EBE14CE00D560B8 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		F7D1B7871EBE150000D560B8 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		F7D1B78A1EBE1B0000D560B8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		F7D1B78C1EBE1B0000D560B8 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F7D1B78D1EBE1B0000D560B8 /* GetTopPostsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopPostsEndpoint.swift; sourceTree = "<group>"; };
-		F7D1B78E1EBE1B0000D560B8 /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
-		F7D1B78F1EBE1B0000D560B8 /* RequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
 		F7D1B7901EBE1B0000D560B8 /* TopPostsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPostsResponse.swift; sourceTree = "<group>"; };
 		F7D1B7921EBE1B0000D560B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7D1B7931EBE1B0000D560B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +96,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7B844951EBE5ADF00203134 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F7B844961EBE5ADF00203134 /* Endpoint.swift */,
+				F7B844971EBE5ADF00203134 /* NetworkSession.swift */,
+				F7B844981EBE5ADF00203134 /* RequestResponse.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		F7D1B74A1EBDD37F00D560B8 = {
 			isa = PBXGroup;
 			children = (
@@ -149,10 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				F7D1B7AB1EBE1D0400D560B8 /* FeedService.swift */,
-				F7D1B78C1EBE1B0000D560B8 /* Endpoint.swift */,
+				F7B8449C1EBE5AFE00203134 /* ImageLoader.swift */,
+				F7B844951EBE5ADF00203134 /* Base */,
 				F7D1B78D1EBE1B0000D560B8 /* GetTopPostsEndpoint.swift */,
-				F7D1B78E1EBE1B0000D560B8 /* NetworkSession.swift */,
-				F7D1B78F1EBE1B0000D560B8 /* RequestResponse.swift */,
 				F7D1B7901EBE1B0000D560B8 /* TopPostsResponse.swift */,
 			);
 			path = Networking;
@@ -181,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D1B7BD1EBE3BB900D560B8 /* DataSources */,
+				F7B844911EBE5A0200203134 /* UIImageView+Cache.swift */,
 			);
 			path = Misk;
 			sourceTree = "<group>";
@@ -353,12 +367,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7D1B79A1EBE1B0000D560B8 /* RequestResponse.swift in Sources */,
+				F7B8449A1EBE5ADF00203134 /* NetworkSession.swift in Sources */,
 				F7D1B7571EBDD37F00D560B8 /* AppDelegate.swift in Sources */,
+				F7B8449D1EBE5AFE00203134 /* ImageLoader.swift in Sources */,
 				F7D1B7CF1EBE3EBA00D560B8 /* PostTableViewCell.swift in Sources */,
-				F7D1B7991EBE1B0000D560B8 /* NetworkSession.swift in Sources */,
 				F7D1B7981EBE1B0000D560B8 /* GetTopPostsEndpoint.swift in Sources */,
-				F7D1B7971EBE1B0000D560B8 /* Endpoint.swift in Sources */,
+				F7B8449B1EBE5ADF00203134 /* RequestResponse.swift in Sources */,
 				F7D1B7C81EBE3BB900D560B8 /* UpdatableCell.swift in Sources */,
 				F7D1B7CA1EBE3BB900D560B8 /* TableViewDataSource.swift in Sources */,
 				F7D1B7C61EBE3BB900D560B8 /* ArrayDataSource.swift in Sources */,
@@ -366,10 +380,12 @@
 				F7D1B7AC1EBE1D0400D560B8 /* FeedService.swift in Sources */,
 				F7D1B79B1EBE1B0000D560B8 /* TopPostsResponse.swift in Sources */,
 				F7D1B7AA1EBE1CEC00D560B8 /* PostsProvider.swift in Sources */,
+				F7B844991EBE5ADF00203134 /* Endpoint.swift in Sources */,
 				F7D1B7CC1EBE3BF500D560B8 /* Reusable.swift in Sources */,
 				F7D1B79E1EBE1B0000D560B8 /* FeedViewController.swift in Sources */,
 				F7D1B7C91EBE3BB900D560B8 /* ArrayTableViewDataSource.swift in Sources */,
 				F7D1B7961EBE1B0000D560B8 /* Post.swift in Sources */,
+				F7B844921EBE5A0200203134 /* UIImageView+Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -499,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -589,6 +605,7 @@
 				F7D1B7801EBDEC1B00D560B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
