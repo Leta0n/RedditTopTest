@@ -12,12 +12,20 @@ class PostTableViewCell: UITableViewCell, UpdatableCell {
 	typealias CellModelType = Post
 	
 	@IBOutlet weak private var titleLabel: UILabel!
-	
+	@IBOutlet weak private var comemntsLabel: UILabel!
+	@IBOutlet weak private var dateLabel: UILabel!
+	@IBOutlet weak private var authorLabel: UILabel!
+	@IBOutlet weak private var previewImageView: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 	
 	func update(withModel model: Post) {
 		titleLabel.text = model.title
+		comemntsLabel.text = "\(model.commentsAmount) comments"
+		dateLabel.text = model.displayableDate()
+		authorLabel.text = "by \(model.author)"
+		
 	}
 }

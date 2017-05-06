@@ -25,7 +25,7 @@ func PostMapper(element: [String: Any]) -> Post? {
 	guard let data = element["data"] as? [String: Any] else { return nil }
 	guard let title = data["title"] as? String else { return nil }
 	guard let author = data["author"] as? String else { return nil }
-	guard let timeshtamp = data["created"] as? Double else { return nil }
+	guard let timeshtamp = data["created_utc"] as? Double else { return nil }
 	guard let comments = data["num_comments"] as? Int else { return nil }
 	
 	var thumbnailURL: URL?

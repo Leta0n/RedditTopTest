@@ -15,4 +15,18 @@ struct Post {
 	let commentsAmount: Int
 	var thumbnailURL: URL?
 	var imageURL: URL?
+	
+	func displayableDate() -> String {
+		let calendar = Calendar.current
+		let components = calendar.dateComponents([.hour, .minute], from: date, to: Date())
+		var dateString = "Submitted "
+		if let hours = components.hour {
+			if hours < 1 {
+				dateString = "just now"
+			} else {
+				dateString = "\(hours) hours ago"
+			}
+		}
+		return dateString
+	}
 }
