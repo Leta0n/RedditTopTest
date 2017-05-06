@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class PostsService {
+final class FeedService {
 	private let networkSession: NetworkSession
 	
 	init(_ session: NetworkSession) {

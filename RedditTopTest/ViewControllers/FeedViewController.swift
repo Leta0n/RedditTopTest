@@ -10,11 +10,20 @@ import UIKit
 
 class FeedViewController: UIViewController {
 	
+	// MARK: - IBOutlets
 	@IBOutlet weak private var tableView: UITableView!
+	
+	// MARK: - Dependencies
+	var feedService: FeedService!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		setupDataSource()
 		setupTableView()
+	}
+	
+	func setupDataSource() {
+		
 	}
 	
 	func setupTableView() {
