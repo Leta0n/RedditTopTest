@@ -13,6 +13,6 @@ struct Post {
 	let author: String
 	let date: Date
 	let commentsAmount: Int
-	let thumbnailURL: URL?
-	let imageURL: URL?
+	var thumbnailURL: URL?
+	var imageURL: URL?
 }

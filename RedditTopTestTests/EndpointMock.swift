@@ -12,7 +12,7 @@ import Foundation
 struct EndpointMock: Endpoint {
 	typealias Response = ResponseMock
 	var path: String = "search"
-	var parameters: [String : String] = ["q": "how+to+create+app+for+ios"]
+	var parameters: [String : Any] = ["q": "how+to+create+app+for+ios"]
 }
 
 struct ResponseMock: RequestResponse {

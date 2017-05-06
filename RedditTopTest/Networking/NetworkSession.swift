@@ -29,15 +29,18 @@ class NetworkSession {
 			guard strongSelf.currentDataTask != nil else { return }
 			guard error == nil else { return }
 			guard let rawData = data else { return }
-			completion(EndpointType.Response(rawData))
+			guard let response = EndpointType.Response(rawData) else { return }
+			completion(response)
 		}
+		currentDataTask?.resume()
 	}
 
 	func requestURL<EndpointType: Endpoint>(with endpoint: EndpointType) -> URL? {
-		var pathWithQueryString = endpoint.path
 		let components = endpoint.parameters.enumerated().map {"\($0.element.key)=\($0.element.value)"}
 		let queryString = components.joined(separator: "&")
-		pathWithQueryString.append("?" + queryString)
-		return serverURL.appendingPathComponent(pathWithQueryString)
+		var urlComponents = URLComponents(url: serverURL, resolvingAgainstBaseURL: true)
+		urlComponents?.path = endpoint.path
+		urlComponents?.query = queryString
+		return urlComponents?.url
 	}
 }

@@ -1,5 +1,5 @@
 //
-//  RequestResponse.swift
+//  PostsProvider.swift
 //  RedditTopTest
 //
 //  Created by Glib Pavliuchenko on 5/6/17.
@@ -7,7 +7,3 @@
 //
 
 import Foundation
-
-protocol RequestResponse {
-	init?(_ data: Data)
-}

@@ -11,9 +11,9 @@ import Foundation
 protocol Endpoint {
 	associatedtype Response: RequestResponse
 	var path: String { get }
-	var parameters: [String: String] { get }
+	var parameters: [String: Any] { get }
 }
 
 extension Endpoint {
-	var parameters: [String: String] { return [:] }
+	var parameters: [String: Any] { return [:] }
 }

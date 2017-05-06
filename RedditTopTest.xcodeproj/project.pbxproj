@@ -22,6 +22,8 @@
 		F7D1B79E1EBE1B0000D560B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7951EBE1B0000D560B8 /* ViewController.swift */; };
 		F7D1B7A71EBE1C3A00D560B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1B79F1EBE1B3C00D560B8 /* LaunchScreen.storyboard */; };
 		F7D1B7A81EBE1C3A00D560B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D1B7A11EBE1B3C00D560B8 /* Main.storyboard */; };
+		F7D1B7AA1EBE1CEC00D560B8 /* PostsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7A91EBE1CEC00D560B8 /* PostsProvider.swift */; };
+		F7D1B7AC1EBE1D0400D560B8 /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7AB1EBE1D0400D560B8 /* PostsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		F7D1B7951EBE1B0000D560B8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7D1B7A01EBE1B3C00D560B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7D1B7A21EBE1B3C00D560B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7D1B7A91EBE1CEC00D560B8 /* PostsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsProvider.swift; sourceTree = "<group>"; };
+		F7D1B7AB1EBE1D0400D560B8 /* PostsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D1B78A1EBE1B0000D560B8 /* Post.swift */,
+				F7D1B7A91EBE1CEC00D560B8 /* PostsProvider.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 		F7D1B78B1EBE1B0000D560B8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F7D1B7AB1EBE1D0400D560B8 /* PostsService.swift */,
 				F7D1B78C1EBE1B0000D560B8 /* Endpoint.swift */,
 				F7D1B78D1EBE1B0000D560B8 /* GetTopPostsEndpoint.swift */,
 				F7D1B78E1EBE1B0000D560B8 /* NetworkSession.swift */,
@@ -283,7 +289,9 @@
 				F7D1B7991EBE1B0000D560B8 /* NetworkSession.swift in Sources */,
 				F7D1B7981EBE1B0000D560B8 /* GetTopPostsEndpoint.swift in Sources */,
 				F7D1B7971EBE1B0000D560B8 /* Endpoint.swift in Sources */,
+				F7D1B7AC1EBE1D0400D560B8 /* PostsService.swift in Sources */,
 				F7D1B79B1EBE1B0000D560B8 /* TopPostsResponse.swift in Sources */,
+				F7D1B7AA1EBE1CEC00D560B8 /* PostsProvider.swift in Sources */,
 				F7D1B79E1EBE1B0000D560B8 /* ViewController.swift in Sources */,
 				F7D1B7961EBE1B0000D560B8 /* Post.swift in Sources */,
 			);
