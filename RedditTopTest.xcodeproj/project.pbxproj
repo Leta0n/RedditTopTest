@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F7B844921EBE5A0200203134 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844911EBE5A0200203134 /* UIImageView+Cache.swift */; };
+		F7B844921EBE5A0200203134 /* UIImageView+ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844911EBE5A0200203134 /* UIImageView+ImageLoading.swift */; };
 		F7B844991EBE5ADF00203134 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844961EBE5ADF00203134 /* Endpoint.swift */; };
 		F7B8449A1EBE5ADF00203134 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844971EBE5ADF00203134 /* NetworkSession.swift */; };
 		F7B8449B1EBE5ADF00203134 /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844981EBE5ADF00203134 /* RequestResponse.swift */; };
@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F7B844911EBE5A0200203134 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
+		F7B844911EBE5A0200203134 /* UIImageView+ImageLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoading.swift"; sourceTree = "<group>"; };
 		F7B844961EBE5ADF00203134 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F7B844971EBE5ADF00203134 /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		F7B844981EBE5ADF00203134 /* RequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D1B7BD1EBE3BB900D560B8 /* DataSources */,
-				F7B844911EBE5A0200203134 /* UIImageView+Cache.swift */,
+				F7B844911EBE5A0200203134 /* UIImageView+ImageLoading.swift */,
 			);
 			path = Misk;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 				F7D1B79E1EBE1B0000D560B8 /* FeedViewController.swift in Sources */,
 				F7D1B7C91EBE3BB900D560B8 /* ArrayTableViewDataSource.swift in Sources */,
 				F7D1B7961EBE1B0000D560B8 /* Post.swift in Sources */,
-				F7B844921EBE5A0200203134 /* UIImageView+Cache.swift in Sources */,
+				F7B844921EBE5A0200203134 /* UIImageView+ImageLoading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

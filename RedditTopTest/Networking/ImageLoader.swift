@@ -9,7 +9,9 @@
 import UIKit
 
 class ImageLoader {
+	
 	private let queue: DispatchQueue
+	
 	init(_ queue: DispatchQueue) {
 		self.queue = queue
 	}
@@ -22,7 +24,6 @@ class ImageLoader {
 				completion(image, url)
 			}
 		}
-		
 	}
 }
 
