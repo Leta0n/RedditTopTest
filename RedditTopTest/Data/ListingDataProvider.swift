@@ -10,5 +10,7 @@ import Foundation
 
 protocol ListingDataProvider {
 	associatedtype ItemType
-	func dataArray(with pagination: PaginationInfo, completion: @escaping ([ItemType]) -> Void)
+	var fetchLimit: Int { get }
+	func initialFetch(completion: @escaping ([ItemType]) -> Void)
+	func fetchMore(completion: @escaping ([ItemType]) -> Void)
 }

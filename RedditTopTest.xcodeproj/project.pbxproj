@@ -13,7 +13,6 @@
 		F7B844B01EBF058E00203134 /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844AA1EBF058E00203134 /* RequestResponse.swift */; };
 		F7B844B11EBF058E00203134 /* GetTopPostsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844AC1EBF058E00203134 /* GetTopPostsEndpoint.swift */; };
 		F7B844B21EBF058E00203134 /* TopPostsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844AD1EBF058E00203134 /* TopPostsResponse.swift */; };
-		F7B844B41EBF066500203134 /* PaginationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844B31EBF066500203134 /* PaginationInfo.swift */; };
 		F7B844B61EBF0B3100203134 /* ListingDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844B51EBF0B3100203134 /* ListingDataProvider.swift */; };
 		F7B844B81EBF160100203134 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844B71EBF160100203134 /* Result.swift */; };
 		F7D1B7571EBDD37F00D560B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7561EBDD37F00D560B8 /* AppDelegate.swift */; };
@@ -54,7 +53,6 @@
 		F7B844AA1EBF058E00203134 /* RequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
 		F7B844AC1EBF058E00203134 /* GetTopPostsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopPostsEndpoint.swift; sourceTree = "<group>"; };
 		F7B844AD1EBF058E00203134 /* TopPostsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPostsResponse.swift; sourceTree = "<group>"; };
-		F7B844B31EBF066500203134 /* PaginationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationInfo.swift; sourceTree = "<group>"; };
 		F7B844B51EBF0B3100203134 /* ListingDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDataProvider.swift; sourceTree = "<group>"; };
 		F7B844B71EBF160100203134 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F7D1B7531EBDD37F00D560B8 /* RedditTopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditTopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				F7D1B7BD1EBE3BB900D560B8 /* DataSources */,
-				F7B844B31EBF066500203134 /* PaginationInfo.swift */,
 			);
 			path = Misk;
 			sourceTree = "<group>";
@@ -401,7 +398,6 @@
 				F7D1B7C91EBE3BB900D560B8 /* ArrayTableViewDataSource.swift in Sources */,
 				F7B844B81EBF160100203134 /* Result.swift in Sources */,
 				F7D1B7961EBE1B0000D560B8 /* Post.swift in Sources */,
-				F7B844B41EBF066500203134 /* PaginationInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,13 +15,14 @@ final class FeedService {
 		networkSession = session
 	}
 	
-	func fetchPosts(with pagination: PaginationInfo, completion: @escaping (Result<[Post]>) -> Void) {
-		let endpont = GetTopPostsEndpoint(pagination.limit, count: pagination.offset)
+	func fetchPosts(limit: Int, nextLink: String?,
+	                completion: @escaping ((Result<(posts: [Post], nextLink: String?)>)) -> Void) {
+		let endpont = GetTopPostsEndpoint(limit, nextLink: nextLink)
 		networkSession.performRequest(from: endpont, completion: { result in
 			DispatchQueue.main.sync {
 				switch result {
 				case .success(let response):
-					completion(Result.success(value: response.posts))
+					completion(Result.success(value: (response.posts, response.nextLink)))
 				case .failure():
 					completion(Result.failure())
 				}

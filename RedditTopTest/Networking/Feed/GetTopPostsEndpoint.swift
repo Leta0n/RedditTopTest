@@ -16,7 +16,12 @@ struct GetTopPostsEndpoint: Endpoint {
 	
 	/// - parameter limit: The maximum number of items to return in this slice of the listing.
 	/// - parameter count: The number of items already seen in this listing.
-	init(_ limit: Int, count: Int) {
-		parameters = ["limit": limit, "count": count]
+	init(_ limit: Int, nextLink: String?) {
+		var params: [String: Any] = [:]
+		params["limit"] = limit
+		if let after = nextLink {
+			params["after"] = after
+		}
+		parameters = params
 	}
 }

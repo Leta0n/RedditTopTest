@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	private func setupRootViewController(with networkSession: NetworkSession) {
 		let feedService = FeedService(networkSession)
 		if let rootViewController = window?.rootViewController as? FeedViewController {
-			rootViewController.postsProvider = PostsProvider(feedService)
+			rootViewController.postsProvider = PostsProvider(feedService, fetchLimit: 15)
 			let flowController = FeedFlowController(rootViewController)
 			rootViewController.flowController = flowController
 		}

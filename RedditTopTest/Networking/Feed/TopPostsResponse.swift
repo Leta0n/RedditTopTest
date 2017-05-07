@@ -11,12 +11,14 @@ import Foundation
 struct TopPostsResponse: RequestResponse {
 	
 	var posts: [Post] = []
+	var nextLink: String?
 	
 	init?(_ data: Data) {
 		guard let parsedObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) else { return nil }
 		guard let json = parsedObject as? [String: Any] else { return nil }
 		guard let data = json["data"] as? [String: Any] else { return nil }
 		guard let rawPosts = data["children"] as? [[String: Any]] else { return nil }
+		nextLink = data["after"] as? String
 		posts.append(contentsOf: rawPosts.map { PostMapper(element: $0) }.flatMap { $0 })
 	}
 }
