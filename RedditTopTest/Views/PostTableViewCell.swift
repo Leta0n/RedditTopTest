@@ -30,8 +30,4 @@ class PostTableViewCell: UITableViewCell, UpdatableCell {
 			previewImageView.setImage(from: url)
 		}
 	}
-	
-	func updateImage(_ image: UIImage) {
-		previewImageView.image = image
-	}
 }

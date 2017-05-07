@@ -14,7 +14,7 @@ struct Post {
 	let date: Date
 	let commentsAmount: Int
 	var thumbnailURL: URL?
-	var imageURL: URL?
+	var detailsURL: URL?
 	
 	func displayableDate() -> String {
 		let calendar = Calendar.current

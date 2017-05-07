@@ -8,25 +8,26 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, UITableViewDelegate {
 	
 	// MARK: - IBOutlets
 	@IBOutlet weak private var tableView: UITableView!
 	
 	// MARK: - Dependencies
-	var feedService: FeedService!
+	var postsProvider: PostsProvider!
+	var flowController: FeedFlowController!
 	var dataSource: ArrayTableViewDataSource<Post, PostTableViewCell>!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupDataSource()
 		setupTableView()
-		feedService.fetchPosts { [weak self] posts in
+		postsProvider.initialFetch { [weak self] posts in
 			guard let strongSelf = self else { return }
 			strongSelf.dataSource.reload(withItems: posts)
 		}
 	}
-	
+
 	func setupDataSource() {
 		dataSource = ArrayTableViewDataSource(items: [], tableView: tableView)
 	}
@@ -36,5 +37,23 @@ class FeedViewController: UIViewController {
 		tableView.estimatedRowHeight = 100
 		tableView.tableFooterView = UIView(frame: CGRect.zero)
 		tableView.dataSource = dataSource
+		tableView.delegate = self
+	}
+	
+	// MARK: - UITableViewDelegate
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		let post = dataSource[indexPath.row]
+		flowController.postSelected(post)
+	}
+	
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		if indexPath.row == dataSource.itemsCount(inSection: 0) - 1  && !postsProvider.loading {
+			postsProvider.fetchMore { [weak self] posts in
+				guard let strongSelf = self else { return }
+				strongSelf.dataSource.add(items: posts)
+			}
+		}
 	}
 }

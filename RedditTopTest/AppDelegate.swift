@@ -15,19 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	func application(_ application: UIApplication,
 	                 didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		setupNetworking(application)
+		let session = setupNetworking(application)
+		setupRootViewController(with: session)
 		setupImageLoader()
 		return true
 	}
 	
 	// MARK: - Private
 	
-	private func setupNetworking(_ application: UIApplication) {
+	private func setupNetworking(_ application: UIApplication) -> NetworkSession {
 		guard let url = URL(string: "https://www.reddit.com") else { fatalError() }
-		let networkSession = NetworkSession(URLSession.shared, baseServerURL: url)
+		return NetworkSession(URLSession.shared, baseServerURL: url)
+	}
+	
+	private func setupRootViewController(with networkSession: NetworkSession) {
 		let feedService = FeedService(networkSession)
-		if let rootVC = window?.rootViewController as? FeedViewController {
-			rootVC.feedService = feedService
+		if let rootViewController = window?.rootViewController as? FeedViewController {
+			rootViewController.postsProvider = PostsProvider(feedService, fetchLimit: 15)
+			let flowController = FeedFlowController(rootViewController)
+			rootViewController.flowController = flowController
 		}
 	}
 	
