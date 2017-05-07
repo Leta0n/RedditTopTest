@@ -16,6 +16,10 @@ class PostsProvider: ListingDataProvider {
 	
 	private var feedService: FeedService
 	
+	// MARK: - Properties
+	
+	var loading: Bool = false
+	
 	// MARK: - Initialization
 	
 	init(_ service: FeedService) {
@@ -25,8 +29,16 @@ class PostsProvider: ListingDataProvider {
 	// MARK: - Accessor
 	
 	func dataArray(with pagination: PaginationInfo, completion: @escaping ([Post]) -> Void) {
-		feedService.fetchPosts { posts in
-			completion(posts)
+		loading = true
+		feedService.fetchPosts(with: pagination) { [weak self] result in
+			guard let strongSelf = self else { return }
+			switch result {
+			case .success(let posts):
+				completion(posts)
+				fallthrough
+			case .failure():
+				strongSelf.loading = false
+			}
 		}
 	}
 }

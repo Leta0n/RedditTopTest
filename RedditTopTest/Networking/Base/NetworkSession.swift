@@ -20,17 +20,27 @@ class NetworkSession {
 	}
 	
 	func performRequest<EndpointType: Endpoint>(from endpoint: EndpointType,
-	                    completion: @escaping (EndpointType.Response) -> Void) {
+	                    completion: @escaping (Result<EndpointType.Response>) -> Void) {
 		currentDataTask?.cancel()
 		currentDataTask = nil
-		guard let url = requestURL(with: endpoint) else { return }
+		guard let url = requestURL(with: endpoint) else {
+			completion(Result.failure())
+			return
+		}
 		currentDataTask = urlSession.dataTask(with: url) { [weak self] data, _, error in
+			var failed = true
+			defer {
+				if failed {
+					completion(Result.failure())
+				}
+			}
 			guard let strongSelf = self else { return }
-			guard strongSelf.currentDataTask != nil else { return }
+			guard strongSelf.currentDataTask != nil else { return}
 			guard error == nil else { return }
 			guard let rawData = data else { return }
 			guard let response = EndpointType.Response(rawData) else { return }
-			completion(response)
+			failed = false
+			completion(Result.success(value: response))
 		}
 		currentDataTask?.resume()
 	}

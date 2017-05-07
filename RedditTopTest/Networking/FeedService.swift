@@ -15,11 +15,16 @@ final class FeedService {
 		networkSession = session
 	}
 	
-	func fetchPosts(completion: @escaping ([Post]) -> Void) {
-		let endpont = GetTopPostsEndpoint(4, count: 0)
-		networkSession.performRequest(from: endpont, completion: { response in
+	func fetchPosts(with pagination: PaginationInfo, completion: @escaping (Result<[Post]>) -> Void) {
+		let endpont = GetTopPostsEndpoint(pagination.limit, count: pagination.offset)
+		networkSession.performRequest(from: endpont, completion: { result in
 			DispatchQueue.main.sync {
-				completion(response.posts)
+				switch result {
+				case .success(let response):
+					completion(Result.success(value: response.posts))
+				case .failure():
+					completion(Result.failure())
+				}
 			}
 		})
 	}

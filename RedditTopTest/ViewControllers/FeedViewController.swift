@@ -15,7 +15,7 @@ class FeedViewController: UIViewController, UITableViewDelegate {
 	
 	// MARK: - Properties
 	
-	var paginationInfo = PaginationInfo(limit: 5, offset: 0)
+	var paginationInfo = PaginationInfo(limit: 15, offset: 0)
 	
 	// MARK: - Dependencies
 	var postsProvider: PostsProvider!
@@ -50,5 +50,11 @@ class FeedViewController: UIViewController, UITableViewDelegate {
 		tableView.deselectRow(at: indexPath, animated: true)
 		let post = dataSource[indexPath.row]
 		flowController.postSelected(post)
+	}
+	
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		if indexPath.row == dataSource.itemsCount(inSection: 0) - 1 {
+			print("should load")
+		}
 	}
 }
