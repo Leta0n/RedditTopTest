@@ -13,8 +13,12 @@ class FeedViewController: UIViewController, UITableViewDelegate {
 	// MARK: - IBOutlets
 	@IBOutlet weak private var tableView: UITableView!
 	
+	// MARK: - Properties
+	
+	var paginationInfo = PaginationInfo(limit: 5, offset: 0)
+	
 	// MARK: - Dependencies
-	var feedService: FeedService!
+	var postsProvider: PostsProvider!
 	var flowController: FeedFlowController!
 	var dataSource: ArrayTableViewDataSource<Post, PostTableViewCell>!
 
@@ -22,12 +26,12 @@ class FeedViewController: UIViewController, UITableViewDelegate {
 		super.viewDidLoad()
 		setupDataSource()
 		setupTableView()
-		feedService.fetchPosts { [weak self] posts in
+		postsProvider.dataArray(with: paginationInfo) { [weak self] posts in
 			guard let strongSelf = self else { return }
 			strongSelf.dataSource.reload(withItems: posts)
 		}
 	}
-	
+
 	func setupDataSource() {
 		dataSource = ArrayTableViewDataSource(items: [], tableView: tableView)
 	}

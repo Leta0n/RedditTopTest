@@ -13,6 +13,8 @@
 		F7B844B01EBF058E00203134 /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844AA1EBF058E00203134 /* RequestResponse.swift */; };
 		F7B844B11EBF058E00203134 /* GetTopPostsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844AC1EBF058E00203134 /* GetTopPostsEndpoint.swift */; };
 		F7B844B21EBF058E00203134 /* TopPostsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844AD1EBF058E00203134 /* TopPostsResponse.swift */; };
+		F7B844B41EBF066500203134 /* PaginationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844B31EBF066500203134 /* PaginationInfo.swift */; };
+		F7B844B61EBF0B3100203134 /* ListingDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B844B51EBF0B3100203134 /* ListingDataProvider.swift */; };
 		F7D1B7571EBDD37F00D560B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7561EBDD37F00D560B8 /* AppDelegate.swift */; };
 		F7D1B77A1EBDEC1B00D560B8 /* NetworkSessionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7791EBDEC1B00D560B8 /* NetworkSessionTest.swift */; };
 		F7D1B7821EBDEE3400D560B8 /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1B7811EBDEE3400D560B8 /* EndpointMock.swift */; };
@@ -51,6 +53,8 @@
 		F7B844AA1EBF058E00203134 /* RequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
 		F7B844AC1EBF058E00203134 /* GetTopPostsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopPostsEndpoint.swift; sourceTree = "<group>"; };
 		F7B844AD1EBF058E00203134 /* TopPostsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPostsResponse.swift; sourceTree = "<group>"; };
+		F7B844B31EBF066500203134 /* PaginationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationInfo.swift; sourceTree = "<group>"; };
+		F7B844B51EBF0B3100203134 /* ListingDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDataProvider.swift; sourceTree = "<group>"; };
 		F7D1B7531EBDD37F00D560B8 /* RedditTopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditTopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D1B7561EBDD37F00D560B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7D1B7771EBDEC1B00D560B8 /* RedditTopTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditTopTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +166,7 @@
 			children = (
 				F7D1B78A1EBE1B0000D560B8 /* Post.swift */,
 				F7D1B7A91EBE1CEC00D560B8 /* PostsProvider.swift */,
+				F7B844B51EBF0B3100203134 /* ListingDataProvider.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D1B7BD1EBE3BB900D560B8 /* DataSources */,
+				F7B844B31EBF066500203134 /* PaginationInfo.swift */,
 			);
 			path = Misk;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 				F7D1B7C61EBE3BB900D560B8 /* ArrayDataSource.swift in Sources */,
 				F7D1B7C71EBE3BB900D560B8 /* DataSource.swift in Sources */,
 				F7B844B01EBF058E00203134 /* RequestResponse.swift in Sources */,
+				F7B844B61EBF0B3100203134 /* ListingDataProvider.swift in Sources */,
 				F7D1B7AC1EBE1D0400D560B8 /* FeedService.swift in Sources */,
 				F7B844AE1EBF058E00203134 /* Endpoint.swift in Sources */,
 				F7D1B7AA1EBE1CEC00D560B8 /* PostsProvider.swift in Sources */,
@@ -390,6 +397,7 @@
 				F7D1B79E1EBE1B0000D560B8 /* FeedViewController.swift in Sources */,
 				F7D1B7C91EBE3BB900D560B8 /* ArrayTableViewDataSource.swift in Sources */,
 				F7D1B7961EBE1B0000D560B8 /* Post.swift in Sources */,
+				F7B844B41EBF066500203134 /* PaginationInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
