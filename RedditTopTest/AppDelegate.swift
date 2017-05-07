@@ -39,7 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	private func setupImageLoader() {
 		let queue = DispatchQueue(label: "ImageLoading", attributes: .concurrent)
-		let imageLoader = ImageLoader(queue)
+		let cache = NSCache<NSURL, UIImage>()
+		cache.name = "ImageCache"
+		cache.countLimit = 50
+		let imageLoader = ImageLoader(queue, cache: cache)
 		ImageLoader.sharedLoader = imageLoader
 	}
 }
