@@ -23,9 +23,9 @@ class PostTableViewCell: UITableViewCell, UpdatableCell {
 	
 	func update(withModel model: Post) {
 		titleLabel.text = model.title
-		comemntsLabel.text = "\(model.commentsAmount) comments"
+		comemntsLabel.text = model.displayableCommentsAmount()
 		dateLabel.text = model.displayableDate()
-		authorLabel.text = "by \(model.author)"
+		authorLabel.text = model.displayableAuthor()
 		if let url = model.thumbnailURL {
 			previewImageView.setImage(from: url)
 		}

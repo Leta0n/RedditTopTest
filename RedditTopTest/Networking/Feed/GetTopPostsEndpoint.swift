@@ -11,7 +11,7 @@ import Foundation
 /// Represents Reddit api request for top posts. Details - https://www.reddit.com/dev/api
 struct GetTopPostsEndpoint: Endpoint {
 	typealias Response = TopPostsResponse
-	let parameters: [String : Any]
+	let parameters: [String: Any]
 	var path: String = "/r/all/top.json"
 	
 	/// - parameter limit: The maximum number of items to return in this slice of the listing.

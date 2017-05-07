@@ -16,6 +16,8 @@ struct Post {
 	var thumbnailURL: URL?
 	var detailsURL: URL?
 	
+	// MARK: - Custom Accessors
+	
 	func displayableDate() -> String {
 		let calendar = Calendar.current
 		let components = calendar.dateComponents([.hour, .minute], from: date, to: Date())
@@ -28,5 +30,13 @@ struct Post {
 			}
 		}
 		return dateString
+	}
+	
+	func displayableAuthor() -> String {
+		return "by \(author)"
+	}
+	
+	func displayableCommentsAmount() -> String {
+		return "\(commentsAmount) comments"
 	}
 }

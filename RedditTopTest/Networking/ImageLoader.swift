@@ -12,10 +12,13 @@ class ImageLoader {
 	
 	private let queue: DispatchQueue
 	private let cache: NSCache<NSURL, UIImage>
+	
 	init(_ queue: DispatchQueue, cache: NSCache<NSURL, UIImage>) {
 		self.queue = queue
 		self.cache = cache
 	}
+	
+	// MARK: - 
 	
 	func loadImage(with url: URL, completion: @escaping (UIImage, URL) -> Void) {
 		queue.async { [weak self] in

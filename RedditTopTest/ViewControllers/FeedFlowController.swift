@@ -10,11 +10,13 @@ import UIKit
 import SafariServices
 
 class FeedFlowController {
-	private weak var targetViewController: UIViewController?
+	weak var targetViewController: UIViewController?
 	
-	init(_ viewControoler: FeedViewController) {
+	init(_ viewControoler: UIViewController) {
 		targetViewController = viewControoler
 	}
+	
+	// MARK: - 
 	
 	func postSelected(_ post: Post) {
 		guard let url = post.detailsURL else { return }

@@ -14,7 +14,7 @@ class PostsProvider: ListingDataProvider {
 	
 	// MARK: - Dependencies
 	
-	private var feedService: FeedService
+	private var feedService: PostsFetcher
 	
 	// MARK: - Properties
 	
@@ -24,7 +24,7 @@ class PostsProvider: ListingDataProvider {
 	
 	// MARK: - Initialization
 	
-	init(_ service: FeedService, fetchLimit: Int) {
+	init(_ service: PostsFetcher, fetchLimit: Int) {
 		feedService = service
 		self.fetchLimit = fetchLimit
 	}

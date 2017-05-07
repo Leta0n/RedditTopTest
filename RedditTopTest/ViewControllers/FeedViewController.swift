@@ -11,13 +11,17 @@ import UIKit
 class FeedViewController: UIViewController, UITableViewDelegate {
 	
 	// MARK: - IBOutlets
+	
 	@IBOutlet weak private var tableView: UITableView!
 	
 	// MARK: - Dependencies
+	
 	var postsProvider: PostsProvider!
 	var flowController: FeedFlowController!
 	var dataSource: ArrayTableViewDataSource<Post, PostTableViewCell>!
 
+	// MARK: - Life Cycle
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupDataSource()

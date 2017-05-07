@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NetworkSession {
+class NetworkSession: RequestsPerformer {
 	
 	private let urlSession: URLSession
 	private let serverURL: URL

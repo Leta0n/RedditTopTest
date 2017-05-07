@@ -8,17 +8,19 @@
 
 import Foundation
 
-final class FeedService {
-	private let networkSession: NetworkSession
+final class FeedService: PostsFetcher {
+	private let requestPerformer: RequestsPerformer
 	
-	init(_ session: NetworkSession) {
-		networkSession = session
+	init(_ requestPerformer: RequestsPerformer) {
+		self.requestPerformer = requestPerformer
 	}
+	
+	// MARK: - 
 	
 	func fetchPosts(limit: Int, nextLink: String?,
 	                completion: @escaping ((Result<(posts: [Post], nextLink: String?)>)) -> Void) {
 		let endpont = GetTopPostsEndpoint(limit, nextLink: nextLink)
-		networkSession.performRequest(from: endpont, completion: { result in
+		requestPerformer.performRequest(from: endpont, completion: { result in
 			DispatchQueue.main.sync {
 				switch result {
 				case .success(let response):
